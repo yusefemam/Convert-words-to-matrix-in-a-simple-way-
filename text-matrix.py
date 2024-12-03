@@ -1,12 +1,15 @@
 import re
 from collections import Counter
-print("Welcome to linguistics engineering! ") 
-text = input("Enter a text: ").strip().lower()
-words = re.findall(r'\b\w+\b', text.lower().strip())
 
-print("Text matrix:")
-for _ in words:
-    print([_], end = " " *2)
+print("Welcome to Linguistics engineering 🫶! ")
+text = input("Enter a text: ").strip().lower()
+words = re.findall(r'\b\w+\b', text)
+
+print("\nText matrix:")
+for i, word in enumerate(words, 1):
+    print(f"'{word}'", end=" "* 2)
+    if i % 5 == 0:
+        print()
 
 counts = Counter(words)
 
