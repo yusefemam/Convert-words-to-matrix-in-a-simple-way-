@@ -1,6 +1,6 @@
 import re
 from collections import Counter
-
+print("Welcome to linguistics engineering! ") 
 text = input("Enter a text: ").strip().lower()
 words = re.findall(r'\b\w+\b', text.lower().strip())
 
